@@ -1,5 +1,21 @@
 # personal-metaflow
-Configures an opinionated personal Metaflow system by way of a Terraform module.
+Configures an opinionated personal [Metaflow](https://metaflow.org) system by way of a Terraform module.
+
+## What is Metaflow?
+
+Metaflow is a Netflix open-source project with the tagline `A framework for real-life data science`. [This](https://docs.metaflow.org/introduction/why-metaflow) [describes](https://docs.metaflow.org/introduction/what-is-metaflow) the problem Metaflow solves, and the design motivations.
+
+## What is a Personal Metaflow setup?
+
+This module is designed to allow a user (or small team) to offload their larger compute tasks, expressed in a Python workflow class, to an external system, while maintaining an ergonomic local development process. It looks to save cost by not operating the default Netflix Metaflow Metadata Service, and by doing so reduces the cost and complexity of operations for use cases that don't require a large amount of coordination between users.
+
+For more details on the requirements, design, and motivation, see [this companion post](https://wtanner.github.io/metaflow/terraform/2020/08/02/personal-metaflow.html).
+
+## Architecture
+
+This Terraform module sets up the following system:
+
+![Architecture Diagram](https://wtanner.github.io/assets/personal-metaflow-arch.svg)
 
 ## Features
 - Saves money by using Spot instances
